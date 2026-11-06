@@ -6,9 +6,9 @@ import sanctumLogo from './assets/sanctum-logo.svg'
 
 import sanctumMark from './assets/sanctum-mark.svg'
 
-import seniorCompanionship from './assets/senior-companionship-provided.jpg'
+import indianClinicalCare from './assets/indian-clinical-care.jpg'
 
-import seniorClinicalCare from './assets/senior-clinical-care-provided.jpg'
+import indianNurseCare from './assets/indian-nurse-elderly-care.png'
 
 import drSagarMore from './assets/dr-sagar-more.jpeg'
 
@@ -271,7 +271,7 @@ function App() {
 
         <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-[#d4b06a]/50 bg-white/70 px-4 py-2 text-xs font-bold uppercase tracking-[.16em] text-[#8b6c31]"><Sparkles size={14}/> Care Beyond Distance</div>
 
-       <h1 className="max-w-3xl font-display text-5xl font-semibold leading-[1.03] text-[#004c3b] sm:text-5xl lg:text-[4.25rem] lg:leading-[.98]">Bridging the distance with care & dignity.</h1>
+       <h1 className="heading-green max-w-3xl font-display text-5xl font-semibold leading-[1.03] text-[#004c3b] sm:text-5xl lg:text-[4.25rem] lg:leading-[.98]">Bridging the distance with care & dignity.</h1>
 
        <p className="mt-4 max-w-2xl text-lg leading-[1.5] text-slate-600">SANCTuM is built to give families peace of mind when parents or loved ones are ageing at home and children live in another city or country.</p>
 
@@ -314,7 +314,7 @@ function App() {
          </div>
 
          <figure className="hero-care-photo mt-5">
-          <img src={seniorCompanionship} alt="An older man sitting at home with a companion standing beside him" fetchPriority="high" />
+          <img src={indianNurseCare} alt="An Indian nurse supporting a smiling older Indian woman in a wheelchair" fetchPriority="high" />
           <figcaption><HeartHandshake size={17}/> Compassionate care, close to home</figcaption>
          </figure>
 
@@ -350,7 +350,7 @@ function App() {
 
        <Eyebrow>About SANCTuM</Eyebrow>
 
-       <h2 className="mt-4 font-display text-4xl font-semibold leading-tight text-[#004c3b] sm:text-5xl">A holistic senior-care ecosystem built around trust.</h2>
+       <h2 className="heading-green mt-4 font-display text-4xl font-semibold leading-tight text-[#004c3b] sm:text-5xl">A holistic senior-care ecosystem built around trust.</h2>
 
        <p className="mt-6 leading-8 text-slate-600">The SANCTuM care model combines preventive health, home care, rehabilitation, family connectivity and emotional support. The goal is not only service delivery, but dignified ageing and reassurance for families.</p>
 
@@ -393,21 +393,27 @@ function App() {
     </section>
 
 
-    <section id="survey" className="bg-[#fbf8f1] py-16 lg:py-20">
+    <section id="survey" className="survey-section py-16 lg:py-20">
      <div className="survey-layout scroll-reveal mx-auto grid max-w-7xl items-center gap-10 px-5 lg:grid-cols-[.95fr_1.05fr] lg:gap-14 lg:px-8">
       <figure className="survey-art">
-       <img src={sanctumCareCard} alt="SANCTuM — The LivaRo Way, your lifelong health companion" loading="lazy" />
+       <div className="survey-art-image">
+        <img src={sanctumCareCard} alt="SANCTuM — The LivaRo Way, your lifelong health companion" loading="lazy" />
+       </div>
+       <figcaption><span className="survey-art-mark"><HeartHandshake size={17}/></span><span><strong>Care with connection</strong><small>Support that stays close, wherever family lives.</small></span></figcaption>
       </figure>
       <div>
-       <Eyebrow>A note for families</Eyebrow>
-       <h2 className="mt-4 font-display text-4xl font-semibold leading-tight text-[#004c3b] sm:text-5xl">“Are our parents safe, healthy, and emotionally supported?”</h2>
-       <p className="mt-5 leading-7 text-slate-600">When parents live independently and their children are in another city or country, it is natural to wonder how they are doing. SANCTuM — The LivaRo Way is building a compassionate support system for seniors, shaped by the real concerns and needs of families.</p>
+       <Eyebrow light>A note for families</Eyebrow>
+       <h2 className="heading-gold mt-4 font-display text-4xl font-semibold leading-tight sm:text-5xl">“Are our parents safe, healthy, and emotionally supported?”</h2>
+       <p className="survey-description mt-5 leading-7">When parents live independently and their children are in another city or country, it is natural to wonder how they are doing. SANCTuM — The LivaRo Way is building a compassionate support system for seniors, shaped by the real concerns and needs of families.</p>
        <div className="mt-6 grid gap-3 sm:grid-cols-2">
-        {['Regular health monitoring', 'Emotional companionship', 'Emergency and hospital support', 'Dependable family communication'].map(item => <div key={item} className="flex items-center gap-2 text-sm font-medium text-slate-700"><Check size={17} className="shrink-0 text-[#006b52]"/>{item}</div>)}
+        {['Regular health monitoring', 'Emotional companionship', 'Emergency and hospital support', 'Dependable family communication'].map(item => <div key={item} className="survey-check flex items-center gap-2 text-sm font-medium"><Check size={17} className="shrink-0"/>{item}</div>)}
        </div>
-       <div className="mt-7 flex flex-wrap items-center gap-4">
-        <a href="https://forms.gle/3WRpZJQwAtCd2aPx8" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-[#006b52] px-6 py-3 font-semibold text-white shadow-xl shadow-emerald-900/15 transition hover:-translate-y-0.5 hover:bg-[#004c3b]">Share your perspective <ArrowRight size={18}/></a>
-        <span className="text-sm text-slate-500">A short family survey · about 4–5 minutes</span>
+       <div className="survey-invitation mt-7">
+        <div>
+         <h3 className="font-display text-2xl font-bold text-[#e2bf70] sm:text-3xl">Share Your Perspective</h3>
+         <p className="mt-1 text-base font-bold">Short Family Survey · about 4–5 minutes</p>
+        </div>
+        <a href="https://forms.gle/3WRpZJQwAtCd2aPx8" target="_blank" rel="noopener noreferrer" className="survey-cta inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-bold transition hover:-translate-y-0.5">Take the survey <ArrowRight size={18}/></a>
        </div>
       </div>
      </div>
@@ -420,14 +426,22 @@ function App() {
 
       <div className="services-intro">
 
-       <div className="max-w-3xl"><Eyebrow>Holistic Care Service Pillars</Eyebrow><h2 className="mt-4 font-display text-4xl font-semibold text-[#004c3b] sm:text-5xl">Care that covers the person, the home and the family.</h2><p className="mt-5 leading-7 text-slate-600">SANCTuM brings preventive health, home care, rehabilitation, family connection and emotional support together in one care experience.</p></div>
+       <div className="max-w-3xl"><Eyebrow>Holistic Care Service Pillars</Eyebrow><h2 className="heading-green mt-4 font-display text-4xl font-semibold sm:text-5xl">Care that covers the person, the home and the family.</h2><p className="mt-5 leading-7 text-slate-600">SANCTuM brings preventive health, home care, rehabilitation, family connection and emotional support together in one care experience.</p></div>
 
-       <figure className="service-photo">
-
-        <img src={seniorClinicalCare} alt="A healthcare professional providing a vaccination to an older adult" />
-
-        <figcaption><Stethoscope size={17}/> Clinical care, delivered with warmth</figcaption>
-
+       <figure className="service-photo service-showcase">
+        <div className="service-photo-visual">
+         <img src={indianClinicalCare} alt="An Indian physician checking a patient's vital signs in a clinic" loading="lazy" />
+         <span className="service-photo-badge"><HeartPulse size={15}/> Care, closer to home</span>
+        </div>
+        <figcaption className="service-photo-caption">
+         <span className="service-photo-icon"><Stethoscope size={20}/></span>
+         <span className="service-photo-copy">
+          <strong>Clinical care, delivered with warmth</strong>
+          <span>Thoughtful medical support, centred on each person.</span>
+          <a href="https://www.pexels.com/photo/a-doctor-getting-a-patient-vital-signs-14558557/" target="_blank" rel="noopener noreferrer">Photo by Imad Clicks · Pexels</a>
+         </span>
+         <span className="service-photo-arrow" aria-hidden="true"><ArrowRight size={18}/></span>
+        </figcaption>
        </figure>
 
       </div>
@@ -444,7 +458,7 @@ function App() {
 
      <div className="scroll-reveal mx-auto max-w-7xl px-5 lg:px-8">
 
-      <div className="max-w-3xl"><Eyebrow light>Mountain Care Plans</Eyebrow><h2 className="mt-4 font-display text-4xl font-semibold sm:text-5xl">Support as unshakable as mountains.</h2><p className="mt-5 leading-7 text-white/70">Choose from four membership levels: Vindhyachal, Nilgiri, Sahyadri and Himalaya. Contact the SANCTuM team to confirm pricing and plan inclusions.</p></div>
+      <div className="max-w-3xl"><Eyebrow light>Mountain Care Plans</Eyebrow><h2 className="heading-gold mt-4 font-display text-4xl font-semibold sm:text-5xl">Support as unshakable as mountains.</h2><p className="mt-5 leading-7 text-white/70">Choose from four membership levels: Vindhyachal, Nilgiri, Sahyadri and Himalaya. Contact the SANCTuM team to confirm pricing and plan inclusions.</p></div>
 
       <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">{plans.map((plan,i)=><div key={plan.name} className="plan-card rounded-3xl border border-white/10 bg-white/[.06] p-6"><div className="mountain-number">0{i+1}</div><div className="mt-5 text-xs font-bold uppercase tracking-[.18em] text-[#d4b06a]">{plan.tone}</div><h3 className="mt-2 font-display text-2xl font-semibold">{plan.name}</h3><p className="mt-3 text-sm leading-6 text-white/65">{plan.text}</p><div className="mt-6 space-y-3">{plan.perks.map(p=><div key={p} className="flex items-center gap-2 text-sm text-white/80"><Check size={15} className="text-[#d4b06a]"/>{p}</div>)}</div></div>)}</div>
 
@@ -457,7 +471,7 @@ function App() {
      <div className="scroll-reveal mx-auto max-w-7xl px-5 lg:px-8">
       <div className="mx-auto max-w-3xl text-center">
        <Eyebrow>Watch and connect</Eyebrow>
-       <h2 className="mt-4 font-display text-4xl font-semibold text-[#004c3b] sm:text-5xl">SANCTuM, in our own words.</h2>
+       <h2 className="heading-green mt-4 font-display text-4xl font-semibold text-[#004c3b] sm:text-5xl">SANCTuM, in our own words.</h2>
        <p className="mt-5 leading-7 text-slate-600">Explore the original videos shared with us to learn more about the people, purpose, and care behind SANCTuM.</p>
       </div>
       <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -477,7 +491,7 @@ function App() {
 
      <div className="philosophy-layout scroll-reveal mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-[.85fr_1.15fr] lg:gap-14 lg:px-8">
 
-      <div className="philosophy-intro"><img src={sanctumLogo} alt="SANCTuM, The LivaRo Way" className="sanctum-logo philosophy-logo mb-6 w-full"/><Eyebrow>The LivaRo Way</Eyebrow><h2 className="mt-3 max-w-[16ch] font-display text-4xl font-semibold leading-tight text-[#004c3b]">Excellence through servant leadership and reliable systems.</h2><p className="mt-4 leading-7 text-slate-600">The supplied SANCTuM leadership doctrine places responsibility, trust and systems at the centre of care. It describes a culture where communication supports patient safety, teams act as one unit and leaders take ownership.</p></div>
+      <div className="philosophy-intro"><img src={sanctumLogo} alt="SANCTuM, The LivaRo Way" className="sanctum-logo philosophy-logo mb-6 w-full"/><Eyebrow>The LivaRo Way</Eyebrow><h2 className="heading-gold mt-3 max-w-[16ch] font-display text-4xl font-semibold leading-tight text-[#004c3b]">Excellence through servant leadership and reliable systems.</h2><p className="mt-4 leading-7 text-slate-600">The supplied SANCTuM leadership doctrine places responsibility, trust and systems at the centre of care. It describes a culture where communication supports patient safety, teams act as one unit and leaders take ownership.</p></div>
 
       <div className="philosophy-values"><div className="principle-grid grid gap-3 sm:grid-cols-2">{principles.map(([title,text],i)=><div key={title} className="principle-card rounded-2xl border border-emerald-900/10 bg-[#fbfdfb] p-4"><div className="flex items-center justify-between"><div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#d4b06a]/20 text-[#8b6c31]"><span className="font-display font-bold">{i+1}</span></div><Sparkles size={17} className="text-[#d4b06a]"/></div><h3 className="mt-3 font-display text-lg font-semibold text-[#004c3b]">{title}</h3><p className="mt-1 text-sm leading-6 text-slate-600">{text}</p></div>)}</div><div className="purpose-panel mt-4 flex flex-col justify-between gap-3 rounded-2xl bg-[#eaf2e9] p-5 sm:flex-row sm:items-center"><div><div className="text-xs font-bold uppercase tracking-[.18em] text-[#a17d38]">Purpose</div><p className="mt-2 max-w-2xl font-display text-xl leading-7 text-[#004c3b]">Redefine healthcare delivery through trust-based teams, disciplined systems and compassionate leadership.</p></div><span className="purpose-mark" aria-hidden="true"><HeartHandshake size={25}/></span></div></div>
 
@@ -491,7 +505,7 @@ function App() {
 
      <div className="scroll-reveal mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[1fr_.85fr] lg:px-8">
 
-      <div><Eyebrow light>Start a conversation</Eyebrow><h2 className="mt-4 font-display text-4xl font-semibold sm:text-5xl">Start a Conversation. Let's Make Care Feel Closer.</h2><p className="mt-5 max-w-xl leading-7 text-white/70">When children live miles away, parents still deserve dependable care, compassionate companionship, and the reassurance that someone trustworthy is nearby. SANCTuM — The LivaRo Way brings healthcare support, recovery assistance, family connectivity, and dignified ageing closer to home.</p>
+      <div><Eyebrow light>Start a conversation</Eyebrow><h2 className="heading-green mt-4 font-display text-4xl font-semibold sm:text-5xl">Start a Conversation. Let's Make Care Feel Closer.</h2><p className="mt-5 max-w-xl leading-7 text-white/70">When children live miles away, parents still deserve dependable care, compassionate companionship, and the reassurance that someone trustworthy is nearby. SANCTuM — The LivaRo Way brings healthcare support, recovery assistance, family connectivity, and dignified ageing closer to home.</p>
 
        <div className="doctor-profile mt-8"><img src={drSagarMore} alt="Dr. Sagar Subhash More" loading="lazy"/><div><strong>Dr. Sagar Subhash More</strong><span>MBBS, TDD, FCCP, IDCCM</span><span>Chest &amp; Critical Care Physician and Bronchoscopist</span></div></div>
        <div className="mt-5 grid gap-3 sm:grid-cols-2">{office.map(x=><a key={x.phone} href={`tel:+91${x.phone}`} aria-label={`Call ${x.name} at ${x.phone}`} className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 transition hover:bg-white/10"><span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#d4b06a] text-[#173d32]"><Phone size={18}/></span><div><div className="font-semibold">{x.name}</div><div className="text-sm text-white/60">{x.phone}</div></div></a>)}</div>
